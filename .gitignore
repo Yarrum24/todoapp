@@ -7,5 +7,5 @@ GIT commands
 git init                                -- Initialise git
 git add .                               -- Add repository to GIT
 git commit -m "insert comment here"     -- Commit code 
-git status                              -- Status of brach etc
+git status                              -- Status of branch etc
 
