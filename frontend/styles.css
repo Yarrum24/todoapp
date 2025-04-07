@@ -56,7 +56,7 @@ nav {
 .btn-home:hover {
     color:black !important;
     background-color: white !important;
-    border-color: red !important;
+    border-color: gold !important;
     border-width: 5px;
     transform: translateY(-3px);
     transition: 0.15s;
@@ -70,7 +70,7 @@ nav {
 .btn-primary:hover {
     color:black !important;
     background-color: white !important;
-    border-color: red !important;
+    border-color: gold !important;
     border-width: 5px;
     transform: translateY(-3px);
     transition: 0.15s;
@@ -85,7 +85,8 @@ nav {
 .btn-outline-primary:hover {
     color: black !important;
     background-color: white !important;
-    border-color: red !important;
+    border-color: gold !important;
+    border-width: 3px;
     transform: translateY(-3px);
     transition: 0.15s;
 }
@@ -113,7 +114,6 @@ nav {
 
 footer {
 background-color: black;
-}
 
 footer .nav-link {
     text-decoration: underline;

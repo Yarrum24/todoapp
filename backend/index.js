@@ -199,7 +199,7 @@ app.delete('/tasks/:id', async (req, res) => {
 app.patch('/tasks/:id', async (req, res) => {
     try {
         const taskId =req.params.id;
-        const { title, description, dueDate, completed } = req.body; //Extract data from front end request
+        const { title, description, dueDate, completed } = req.body;    //Extract data from front end request
 
         if (!title || !description || !dueDate) {
             return res.status(400).json({ Error: 'All fields required'})

@@ -190,7 +190,7 @@
                 });
             });
 
-            toDoList.addEventListener('click', (event) => {
+            toDoList.addEventListener('click', (event) => {           //Edits task
                 if (event.target.classList.contains('edit')) {
                     const taskId = event.target.getAttribute('data-id');
                     const taskTitle = event.target.getAttribute('data-title');
@@ -201,7 +201,7 @@
                     const editTaskDescription = document.getElementById('editTaskDescription');
                     const editDueDate = document.getElementById('editDueDate');
                     const saveChangesButton = document.getElementById('saveChangesButton');
-
+                        
                     editTaskName.value = taskTitle;
                     editTaskDescription.value = taskDescription;
                 
@@ -212,7 +212,7 @@
                     saveChangesButton.addEventListener('click', async () => {
                         await editTask(taskId);
 
-                        const editTaskModal = boostrap.Modal.getInstance(document.getElementById('editTaskWindow'));
+                        const editTaskModal = bootstrap.Modal.getInstance(document.getElementById('editTaskWindow'));
                         editTaskModal.hide();
                     }, { once: true});
                 }
@@ -445,6 +445,8 @@
                 console.error('Error:', error);
             }
         };
+
+
 
     </script>
 
