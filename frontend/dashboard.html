@@ -79,7 +79,7 @@
     </main>
 
     <!-- ↑ Create a task ↑ -->
-    <h1>This is something for the git!</h1>
+    
     <!-- ↓ Footer ↓ -->
 
     <footer class="py-5 container">
@@ -139,6 +139,7 @@
         //Functions and event listeners
         //Resets form and get tasks and displays them when window loads/refreshes
         window.addEventListener('DOMContentLoaded', () => {
+            console.log("hello")
             formReset();
             getTasks();
         });
@@ -153,13 +154,13 @@
 
 
         //Event listener for each task button (create,done, not done, edit, x)
-        document.addEventListener('DOMContentloaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const toDoList = document.getElementById('toDoList');
             const completedList = document.getElementById('completedList');
 
-            taskForm.addEventListener('submit', (event) => {             //Creates new task on for and clears form
+            taskForm.addEventListener('submit', (event) => {     
+                console.log("for submitted");        //Creates new task on for and clears form
                 event.preventDefault();
-
                 postTasks();
             });
 
@@ -325,7 +326,7 @@
             try {
                 console.log(taskId);
 
-                const response = await fetch(`${url}/tasks/complete/${taskId}`, {
+                const response = await fetch(`${url}/tasks/completed/${taskId}`, {
                     method: 'PATCH', 
                     headers: {
                         'Content-Type': 'application/json'
@@ -354,9 +355,9 @@
         
         //Mark tasks as not complete
         async function taskNotCompleted(taskId) {
-          try { 
             console.log(taskId);
-
+          try { 
+          
             const response = await fetch(`${url}/tasks/notComplete/${taskId}`, {
                 method: 'PATCH',
                 headers: {

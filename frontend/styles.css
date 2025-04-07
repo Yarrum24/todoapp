@@ -1,9 +1,10 @@
 :root {
-    --primary: #0c2e38;
+    --primary: black;
     --primaryHover: #081c22;
     --primaryActive: #051214;
     --lightText: white;
 }
+
 
 .bg-img {
     background-image: url(/Images/Black\ Background\ Abstract.jpg);
@@ -11,8 +12,11 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.829);
+    background-color: gold;
     background-blend-mode: overlay;
+}
+.bg-features {
+    color: black;
 }
 
 #deleteButton:focus-visible, #deleteButton:active, #deleteButton:focus, #deleteButton {
@@ -32,37 +36,56 @@
 }
 
 .nav-link:hover {
-    background-color: var(--primaryHover) !important;
+    color: black !important;
+    background-color: white !important;
     border-radius: 5px;
     transition: 0.2s;
 }
 
 nav {
-    background-color: var(--primary);
+    background-color: black;
 }
 
+.btn-home {
+    color: white;
+    background-color: black !important;
+    border-color: white!important;
+    transition: 0.15s !important;
+}
+
+.btn-home:hover {
+    color:black !important;
+    background-color: white !important;
+    border-color: red !important;
+    border-width: 5px;
+    transform: translateY(-3px);
+    transition: 0.15s;
+}
 .btn-primary {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
+    background-color: black !important;
+    border-color: white!important;
     transition: 0.15s !important;
 }
 
 .btn-primary:hover {
-    background-color: var(--primaryHover) !important;
-    border-color: var(--primaryHover) !important;
+    color:black !important;
+    background-color: white !important;
+    border-color: red !important;
+    border-width: 5px;
     transform: translateY(-3px);
     transition: 0.15s;
 }
 
 .btn-outline-primary {
-    border-color: var(--lightText) !important;
-    color: var(--lightText) !important;
+    border-color: white !important;
+    color: white !important;
     transition: 0.15s !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--primaryHover) !important;
-    border-color: var(--primaryHover) !important;
+    color: black !important;
+    background-color: white !important;
+    border-color: red !important;
     transform: translateY(-3px);
     transition: 0.15s;
 }
@@ -86,6 +109,10 @@ nav {
 
 .input-group {
     width: 100% !important;
+}
+
+footer {
+background-color: black;
 }
 
 footer .nav-link {

@@ -82,13 +82,13 @@ app.get('/signup', (req, res) => {
 //To create new tasks and save them to database
 app.post('/tasks', async (req, res) => {
     try {
-        const { title, description, dueDate, complated } = req.body;
+        const { title, description, dueDate, completed } = req.body;
 
         if (!title || !description || !dueDate) {
             return res.status(400).json({ Error: 'All fields required' });
         }
 
-        const taskData = { title, description, dueDate, complated };
+        const taskData = { title, description, dueDate, completed };
         const createTask = new Task(taskData);
         const saveTask = await createTask.save();
 
@@ -150,16 +150,16 @@ app.patch('/tasks/completed/:id', async (req, res) => {
 //To make the task 'not complete' and move columns
 app.patch('/tasks/notComplete/:id', async (req, res) => {
     try {
-        const { completed }     = req.body;
+        const { completed } = req.body;
         const taskId = req.params.id;
 
         const response = await Task.findByIdAndUpdate(taskId, { completed }, { new: false });
 
-        if (!respnse) {
+        if (!response) {
             return res.status(404).json({ message: 'Task not found' });
         }
 
-        console.log(respnse);
+        console.log(response);
         res.json({ task: response, message: 'Task set to "Not Complete"' });
 
     } catch (error) {
@@ -221,20 +221,6 @@ app.patch('/tasks/:id', async (req, res) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(port, () => {
     console.log(`To Do App listening on port: ${port}`);  // To Do App listening on port: 3000
 });
-
-
