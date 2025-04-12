@@ -8,4 +8,4 @@ git init                                -- Initialise git
 git add .                               -- Add repository to GIT
 git commit -m "insert comment here"     -- Commit code 
 git status                              -- Status of branch etc
-
+git push                                -- Pushes to origin/main on github

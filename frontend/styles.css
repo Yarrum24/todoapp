@@ -5,7 +5,6 @@
     --lightText: white;
 }
 
-
 .bg-img {
     background-image: url(/Images/Black\ Background\ Abstract.jpg);
     height: 90vh;
@@ -37,7 +36,7 @@
 
 .nav-link:hover {
     color: black !important;
-    background-color: white !important;
+    background-color: gold !important;
     border-radius: 5px;
     transition: 0.2s;
 }
@@ -69,8 +68,7 @@ nav {
 
 .btn-primary:hover {
     color:black !important;
-    background-color: white !important;
-    border-color: gold !important;
+    background-color: gold !important;
     border-width: 5px;
     transform: translateY(-3px);
     transition: 0.15s;
@@ -84,7 +82,7 @@ nav {
 
 .btn-outline-primary:hover {
     color: black !important;
-    background-color: white !important;
+    background-color: gold !important;
     border-color: gold !important;
     border-width: 3px;
     transform: translateY(-3px);
@@ -218,4 +216,3 @@ footer .btn-outline-primary:hover {
 .card {
     height: 100%;
 }
-

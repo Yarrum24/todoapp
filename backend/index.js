@@ -114,7 +114,7 @@ app.get('/tasks', async (req, res) => {
 
     } catch (error) {
         console.error('Backend error:', error);
-        res.status(500).json({error: 'Error grabbing tasks!'})
+        res.status(500).json({error: 'Error grabbing tasks!'});
     }
 });
 
@@ -198,11 +198,11 @@ app.delete('/tasks/:id', async (req, res) => {
 //To edit existing task and update
 app.patch('/tasks/:id', async (req, res) => {
     try {
-        const taskId =req.params.id;
+        const taskId = req.params.id;
         const { title, description, dueDate, completed } = req.body;    //Extract data from front end request
 
         if (!title || !description || !dueDate) {
-            return res.status(400).json({ Error: 'All fields required'})
+            return res.status(400).json({ Error: 'All fields required'});
         }
 
         const taskData = {title, description, dueDate, completed};
@@ -212,7 +212,7 @@ app.patch('/tasks/:id', async (req, res) => {
             return res.status(404).json({ message: 'Task not found'});
         }
 
-        res.status(200).json({ message: 'Update successful', UpdatedTask: response })
+        res.status(200).json({ message: 'Update successful', UpdatedTask: response });
 
     } catch (error) {
         console.error('Error', error);

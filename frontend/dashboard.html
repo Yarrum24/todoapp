@@ -107,7 +107,7 @@
     <!--Edit task modal - pops up when needed-->
     <div class="modal fade" id="editTaskWindow" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-centent">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="editTaskModalLabel">Edit Task</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -190,7 +190,7 @@
                 });
             });
 
-            toDoList.addEventListener('click', (event) => {           //Edits task
+            toDoList.addEventListener('click', (event) => {                //Edits task
                 if (event.target.classList.contains('edit')) {
                     const taskId = event.target.getAttribute('data-id');
                     const taskTitle = event.target.getAttribute('data-title');
@@ -245,7 +245,7 @@
 
                 const response = await fetch(`${url}/tasks`, options);
                 if (!response.ok) {
-                    throw new Error(`Failed to post task: ${response.status}`)
+                    throw new Error(`Failed to post task: ${response.status}`);
                 };
                 
                 const data = await response.json();
@@ -264,7 +264,7 @@
             try {
                 const response = await fetch(`${url}/tasks`);
                 if(!response.ok) {
-                    throw new Error(`Response Status: ${response.status}`)
+                    throw new Error(`Response Status: ${response.status}`);
                 };
 
                 function taskElement(task) {
@@ -292,7 +292,7 @@
                     <p>${task.description}</p>
                     <p><strong>Due: </strong>${new Date(task.dueDate).toLocaleDateString()}</p>
                     <div>
-                        <button data-id="${task.id}" data-title="${task.title}" data-description="${task.description}" data-due-date="${task.dueDate}" class="btn btn-primary shadow-sm edit" data-bs-toggle="modal" data-bs-target="#editTaskWindow" type="button">Edit</button>
+                        <button data-id="${task._id}" data-title="${task.title}" data-description="${task.description}" data-due-date="${task.dueDate}" class="btn btn-primary shadow-sm edit" data-bs-toggle="modal" data-bs-target="#editTaskWindow" type="button">Edit</button>
                         <button data-id="${task._id}" class="btn btn-primary shadow-sm done" type="button">Done</button>    
                     </div>
                     `
@@ -431,7 +431,7 @@
                });
 
                if (!response.ok) {
-                throw new Error('Network Error')
+                throw new Error('Network Error');
                }
 
                const data = await response.json();          //Recieving confirmation of sent data
