@@ -49,13 +49,14 @@ nav {
     color: white;
     background-color: black !important;
     border-color: white!important;
+    border-width: 2px;
     transition: 0.15s !important;
 }
 
 .btn-home:hover {
     color:black !important;
     background-color: white !important;
-    border-color: gold !important;
+    border-color: black !important;
     border-width: 5px;
     transform: translateY(-3px);
     transition: 0.15s;
